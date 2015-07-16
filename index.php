@@ -41,14 +41,22 @@ ExpertTV
  <script type="text/javascript" src="js/jssor.slider.js"></script>
  
  <script>
+ var newwindow;
+ 
  $(function() {
     $(".carousel").jCarouselLite({
         btnNext: ".next",
         btnPrev: ".prev"
-    });
+	});	
+});
        
 
-});
+function poptastic(url, expertid)
+{
+	newwindow=window.open(url,'expertname','height=400,width=400,top=370,left=610');
+	if (window.focus) {newwindow.focus()}
+}
+	   
  </script>
  <script type="text/javascript" src="js/slider.js"></script>
 </head>

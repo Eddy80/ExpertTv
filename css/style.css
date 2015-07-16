@@ -133,7 +133,7 @@ carusel style end
 
 /* Manshet begin*/
 
-.captionOrange, .captionBlack, .captionblue
+.captionOrange, .captionBlack, .captionblue, .captionblue2
        {
             color: #fff;
             font-size: 20px;
@@ -157,6 +157,12 @@ carusel style end
        {
             background: #1B1BF7;
             background-color: rgba(186, 186, 186, 1);
+    }
+	
+.captionblue2
+       {
+            background: #203EE8;
+            background-color: rgba(32, 62, 232, 1);
     }
 	
 a.captionOrange, A.captionOrange:active, A.captionOrange:visited
@@ -374,10 +380,12 @@ a.captionOrange:hover
 
 #popular_title {
 	margin-top:25px;
-	font-size: 21px;
+	font-size: 19px;
 	color:#58707b;
 	font-weight:bold;
 	margin-bottom:25px;
+	float:right;
+	margin-right:18px;
 }
 
 #popular_list {
@@ -550,6 +558,16 @@ a.captionOrange:hover
 	color : #58707b;
 	font-size:12px;
 	font-weight:bold;
+}
+
+#playing_video  textarea{
+	width:98%;
+	height:30px;
+	min-width:98%;
+	max-width:98%;
+	min-height:30px;
+	max-height:30px;
+	
 }
 
 #related_topics {

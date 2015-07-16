@@ -20,38 +20,62 @@
         <!-- Slides Container --> 
         <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1000px; height: 350px;
             overflow: hidden;">
-            <div>
-                <img u="image" src="img/home/01.jpg" />
-				<a class="captionOrange" href="http://www.experttv.az" style="position: absolute; top: 270px; right: 30px; padding-left:10px; padding-right:10px; ">Videoya bax</a>
-                <div u="caption" t="CLIP|LR" du="1500" class="captionblue"  style="position:absolute; left:20px; top: 30px; height:30px; width:500px;"> 
-                Şərh 1: Depressiyadan necə çıxmaq olar?
-                </div>
-				
-				<div u="caption" t="FADE" t2="B" d=-450 class="captionBlack" style="position: absolute; left:700px;top:100px;width:200px;height:90px;">
-                        Şərh 2:<br />
-                        Independent<br />
-                        Javascript Code 
-                </div>
-				
-				<div u="caption" t="CLIP|LR" t2="B" du="2000" class="captionblue"  style="position:absolute; left:20px; top: 220px;  height:30px; width:500px;"> 
-                Şərh 3: Quş südü tortu necə hazırlanır? 
-                </div>
+			
+		<?php
+		
+		require "connect.php";
 
-            </div>
-            <div> 
-                <img u="image" src="img/home/02.jpg" />
-				<a class="captionOrange" href="http://www.experttv.az" style="position: absolute; top: 270px; right: 30px; padding-left:10px; padding-right:10px; ">Videoya bax</a>
-            </div>
-            <div> 
-                <img u="image" src="img/home/03.jpg" />
-				<a class="captionOrange" href="http://www.experttv.az" style="position: absolute; top: 270px; right: 30px; padding-left:10px; padding-right:10px; ">Videoya bax</a>
-                
-            </div>
-            <div>
-                <img u="image" src="img/home/04.jpg" />
-				<a class="captionOrange" href="http://www.experttv.az" style="position: absolute; top: 270px; right: 30px; padding-left:10px; padding-right:10px; ">Videoya bax</a>
-                
-            </div>
+		$query = 'SELECT `id`, `ad`, `sira_id`, `shekil`, `comment1`, `comment2`, `comment3`, `videolink` FROM `manshet` WHERE `active`=0 ORDER BY `sira_id` ASC LIMIT 0 , 10';
+
+		//echo $query;
+
+		$result = $mysqli->query($query);
+									
+									if (mysqli_num_rows($result)>0)
+									{
+									    $rows=array();
+										while($row = $result->fetch_array())
+										{
+										$rows[] = $row;
+										}
+							           
+										foreach($rows as $row)
+										{
+											$id = $row[0];
+											$ad  = $row[1];
+											$sira_id = $row[2];
+											$shekil = $row[3];
+											$comment1 = $row[4];
+											$comment2 = $row[5];
+											$comment3 = $row[6];
+											$videolink = $row[7];
+											
+											//status=0,
+												
+											echo '<div>
+													<img u="image" src="img/home/'.$shekil.'" />
+													<a class="captionOrange" href="index.php?state=cat&vid='.$videolink.'" style="position: absolute; top: 270px; right: 30px; padding-left:10px; padding-right:10px; ">Videoya bax</a>
+													<div u="caption" t="CLIP|LR" du="1500" class="captionblue"  style="position:absolute; left:20px; top: 30px; height:30px; width:500px;"> 
+													'.$comment1.'
+													</div>
+													
+													<div u="caption" t="FADE" t2="B" d=-450 class="captionBlack" style="position: absolute; left:700px;top:100px;width:200px;height:90px;">
+															'.$comment2.'
+													</div>
+													
+													<div u="caption" t="CLIP|LR" t2="B" du="2000" class="captionblue2"  style="position:absolute; left:20px; top: 220px;  height:30px; width:500px;"> 
+													'.$comment3.' 
+													</div>
+
+												</div>';
+										
+										}
+									}   
+
+		?>
+
+			
+           
 
             <!-- Example to add fixed static share buttons in slider BEGIN -->
             <!-- Remove it if no need -->
@@ -127,17 +151,18 @@
                     }
             </style>
 
+			<!--
             <div u="any" style="position: absolute; display: block; top: 6px; right: 16px; width: 280px; height: 40px; z-index: 10;">
 
-                <a class="share-icon share-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http://jssor.com" title="Share on Facebook"></a>
-                <a class="share-icon share-twitter" target="_blank" href="http://twitter.com/share?url=http://jssor.com&text=JavaScript%20jQuery%20Image%20Slider/Slideshow/Carousel/Gallery/Banner%20html%20TOUCH%20SWIPE%20Responsive" title="Share on Twitter"></a>
-                <a class="share-icon share-googleplus" target="_blank" href="https://plus.google.com/share?url=http://jssor.com" title="Share on Google Plus"></a>
-                <a class="share-icon share-linkedin" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://jssor.com" title="Share on LinkedIn"></a>
-                <a class="share-icon share-stumbleupon" target="_blank" href="http://www.stumbleupon.com/submit?url=http://jssor.com&title=JavaScript%20jQuery%20Image%20Slider/Slideshow/Carousel/Gallery/Banner%20html%20TOUCH%20SWIPE%20Responsive" title="Share on StumbleUpon"></a>
-                <a class="share-icon share-pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=http://jssor.com&media=http://jssor.com/img/site/jssor.slider.jpg&description=JavaScript%20jQuery%20Image%20Slider/Slideshow/Carousel/Gallery/Banner%20html%20TOUCH%20SWIPE%20Responsive" title="Share on Pinterst"></a>
-                <a class="share-icon share-email" target="_blank" href="mailto:?Subject=Jssor%20Slider&Body=Highly%20recommended%20JavaScript%20jQuery%20Image%20Slider/Slideshow/Carousel/Gallery/Banner%20html%20TOUCH%20SWIPE%20Responsive%20http://jssor.com" title="Share by Email"></a>
+                <a class="share-icon share-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http://eksperttv.az title="Share on Facebook"></a>
+                <a class="share-icon share-twitter" target="_blank" href="http://twitter.com/share?url=http://eksperttv.az&text=JavaScript%20Eksperttv.az" title="Share on Twitter"></a>
+                <a class="share-icon share-googleplus" target="_blank" href="https://plus.google.com/share?url=http://eksperttv.az" title="Share on Google Plus"></a>
+                <a class="share-icon share-linkedin" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://eksperttv.az" title="Share on LinkedIn"></a>
+                <a class="share-icon share-stumbleupon" target="_blank" href="http://www.stumbleupon.com/submit?url=eksperttv.az&title=JavaScript%20eksperttv.az" title="Share on StumbleUpon"></a>
+                <a class="share-icon share-pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=http://eksperttv.az&media=http://eksperttv.az&description=JavaScript%20eksperttv.az" title="Share on Pinterst"></a>
+                <a class="share-icon share-email" target="_blank" href="mailto:?Subject=Jssor%20Slider&Body=Highly%20recommended%20JavaScript%20eksperttv.az%20http://eksperttv.az" title="Share by Email"></a>
             </div>
- 
+            -->
            
         </div> 
  
@@ -216,7 +241,7 @@
         <span u="arrowright" class="jssora20r" style="top: 123px; right: 8px;">
         </span>
         <!--#endregion Arrow Navigator Skin End -->
-        <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+        <a style="display: none" href="http://eksperttv.az">Bootstrap Slider</a>
     </div> 
     <!-- Jssor Slider End -->
 
