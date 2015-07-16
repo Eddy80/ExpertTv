@@ -1,80 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>
-ExpertTV
-</title>
-<meta charset="UTF-8" />
-<!--<link href="img/icona.ico" rel="shortcut icon" />-->
-<link href="css/style.css" rel="stylesheet" />
- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> 
- <script type="text/javascript" src="js/site.js"></script> 
-</head>
-<body>
-<div id="root">
-
-<div id="top">
-	<div id="logo">
-	&nbsp;
-	</div>
-	<div id="search">
-		<div id="search_left">
-		&nbsp;
-		</div>
-		<div id="search_middle">
-			<div id="topline"></div>
-			<input type="text" name="searchtext" id="searchtext" placeholder="Nəyi bilmək istəyirsiniz?" value="" /> 
-			<div id="bottomline"></div>
-		</div>
-		<div id="search_right">
-		
-		</div>
-	</div>
-</div>  <!-- top div end -->
-<div id="menu">
-	<div class="menu_sub">
-	<img src="img/aile_psixologiya_icon.png" />
-	<span>Ailə və Psixologiya</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/biznes_iqtisadiyyat_icon.png" />
-	<span>Biznes, İqtisadiyyat</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/tehsil_icon.png" />
-	<span>Təhsil</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/avtomobil_icon.png" />
-	<span>Avtomobil</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/saglamliq_icon.png" />
-	<span>SAğlamlıq</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/toy_nishan_icon.png" />
-	<span>Toy və Nişan</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/kulinariya_icon.png" />
-	<span>Kulinariya</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/huquq_icon.png" />
-	<span>Hüquq</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/it_icon.png" />
-	<span>İT</span>
-	</div>
-	<div class="menu_sub">
-	<img src="img/din_icon.png" />
-	<span>Din</span>
-	</div>	
-</div> <!-- menu div end -->
-
-
 <div id="main_opened_video">
 	
 	<div id="opened_video_author_related_topics">
@@ -140,8 +63,6 @@ ExpertTV
 		</div>
 	
 	</div>
-
-	
 	<div id="opened_video_text_related_videos_div">
 		<div id="opened_video_title_text">
 			<div id="opened_video_title">
@@ -318,14 +239,3 @@ ExpertTV
 	</div>
 	
 </div>
-<!--
-
-<div id="bottom">
-&copy; Copyright&nbsp;2012-2015&nbsp; ExpertTV
-</div>
-
--->
-
-</div> <!-- root div end -->
-</body>
-</html>

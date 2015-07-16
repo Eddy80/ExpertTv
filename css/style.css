@@ -521,7 +521,7 @@ a.captionOrange:hover
 
 #opened_video {
 	display:inline-block;
-	width:799px;
+	width:599px;
 	border: 1px double #58707b;
 	margin-top:5px;
 	float:left;
@@ -554,7 +554,7 @@ a.captionOrange:hover
 
 #related_topics {
 	display:inline-block;
-	width:195px;
+	width:395px;
 	border: 1px double #58707b;
 	margin-top:5px;
 	float:right;
@@ -634,8 +634,6 @@ a.captionOrange:hover
 	height:455px;
 }
 
-
-----
 #opened_video_text_related_videos_div {
 	width:100%;
 	float:left;
